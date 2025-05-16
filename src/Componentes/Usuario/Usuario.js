@@ -12,6 +12,12 @@ function Usuario(props) {
   const [email, setEmail] = useState("");
   const [editar, setEditar] = useState(false);
 
+  const handleSubmit = () => {
+    setUsuario({ name: nome, email: email });
+    setEditar(false); // Fechar modo de edição após enviar
+  };
+
+
   return (
     <User>
       {editar ? (
